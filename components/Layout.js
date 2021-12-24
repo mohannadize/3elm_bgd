@@ -6,6 +6,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>علم بجد</title>
+        <base href="./" />
       </Head>
       <div className="section">
         <div className="container">{children}</div>

@@ -65,8 +65,22 @@ export default function index() {
             }}
           />
           <nav className="pagination" role="navigation" aria-label="pagination">
-            {page > 1 && <a className="pagination-previous" onClick={() => setPage(page => page - 1)}>السابق</a>}
-            {articles.length > page && <a className="pagination-next" onClick={() => setPage(page => page + 1)}>التالي</a>}
+            {page > 1 && (
+              <a
+                className="pagination-previous"
+                onClick={() => setPage((page) => page - 1)}
+              >
+                السابق
+              </a>
+            )}
+            {articles.length > page && (
+              <a
+                className="pagination-next"
+                onClick={() => setPage((page) => page + 1)}
+              >
+                التالي
+              </a>
+            )}
           </nav>
         </div>
       </div>
