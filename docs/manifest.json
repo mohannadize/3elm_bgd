@@ -5,8 +5,8 @@
   "display": "standalone",
   "name": "علم بجد - د. اشرف قطب",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "scope": "./",
   "short_name": "علم بجد",
-  "start_url": "/",
+  "start_url": "./",
   "theme_color": "#ffffff"
 }
