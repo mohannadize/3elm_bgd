@@ -8,7 +8,6 @@ const md = require("markdown-it")({ html: true });
 export default function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [page, setPage] = useLocalStorage("current-page", 1);
-
   const currentArticle = articles[page - 1];
 
   return (
@@ -41,7 +40,7 @@ export default function index() {
         </div>
         <div className="column is-3 is-hidden-mobile">
           <aside className="menu">
-            <p className="menu-label">الفهرس</p>
+            <p className="menu-label">اذهب الى</p>
             <ul className="menu-list">
               {articles.map((article) => (
                 <li key={article.id}>

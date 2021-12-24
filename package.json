@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "npm run generate_articles_json && next build && next export && rm -rf docs && mv out docs && touch docs/.nojekyll",
     "start": "next start",
+    "generate_articles_json": "node generate_articles.js",
     "lint": "next lint"
   },
   "dependencies": {
