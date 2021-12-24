@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "description": "مجموعة مقالات الدكتور اشرف قطب (علم بجد)",
+  "dir": "rtl",
+  "display": "standalone",
+  "name": "علم بجد - د. اشرف قطب",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "علم بجد",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}

@@ -7,6 +7,7 @@ export default function Layout({ children }) {
       <Head>
         <title>علم بجد</title>
         <base href="./" />
+        <link rel="manifest" href="./manifest.json" />
       </Head>
       <div className="section">
         <div className="container">{children}</div>
