@@ -39,6 +39,8 @@ export default function index() {
               ))}
             </select>
           </div>
+          <br />
+          <br />
         </div>
         <div className="column is-3 is-hidden-mobile">
           <h1 className="title is-1">علم بجد</h1>
