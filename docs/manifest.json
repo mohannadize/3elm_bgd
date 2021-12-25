@@ -1,5 +1,6 @@
 {
   "background_color": "#ffffff",
+  "lang": "ar-EG",
   "description": "مجموعة مقالات الدكتور اشرف قطب (علم بجد)",
   "dir": "rtl",
   "display": "standalone",
@@ -8,5 +9,54 @@
   "scope": "./",
   "short_name": "علم بجد",
   "start_url": "./",
-  "theme_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./imgs/icons/mipmap-hdpi/ic_launcher.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/mipmap-mdpi/ic_launcher.png",
+      "sizes": "48x48",
+      "purpose": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/mipmap-xhdpi/ic_launcher.png",
+      "sizes": "96x96",
+      "purpose": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/mipmap-xxhdpi/ic_launcher.png",
+      "sizes": "144x144",
+      "purpose": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/mipmap-xxhdpi/ic_launcher.png",
+      "sizes": "144x144",
+      "purpose": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/mipmap-xxxhdpi/ic_launcher.png",
+      "sizes": "192x192",
+      "purpose": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/1024.png",
+      "sizes": "1024x1024",
+      "purpose": "maskable",
+      "type": "image/png"
+    },
+    {
+      "src": "./imgs/icons/play_store_512.png",
+      "sizes": "512x512",
+      "purpose": "maskable",
+      "type": "image/png"
+    }
+  ]
 }

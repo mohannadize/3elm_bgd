@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import Layout from "@components/Layout";
 import useLocalStorage from "@hooks/useLocalStorage";
@@ -6,24 +7,25 @@ import articles from "../articles.json";
 const md = require("markdown-it")({ html: true });
 
 export default function index() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [page, setPage] = useLocalStorage("current-page", 1);
+  const [readArticles, setReadArtcles] = useLocalStorage("read-articles", {});
+
   const currentArticle = articles[page - 1];
 
   return (
     <Layout>
-      <h1 className="title is-1">علم بجد</h1>
-      <div className="subtitle">
-        <a
-          href="https://fb.com/akotbfb"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          للدكتور/ اشرف قطب
-        </a>
-      </div>
       <div className="columns">
         <div className="column is-hidden-tablet">
+          <h1 className="title is-1">علم بجد</h1>
+          <div className="subtitle">
+            <a
+              href="https://fb.com/akotbfb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              للدكتور/ اشرف قطب
+            </a>
+          </div>
           <label className="label">اذهب الى</label>
           <div className="select is-fullwidth">
             <select
@@ -39,6 +41,16 @@ export default function index() {
           </div>
         </div>
         <div className="column is-3 is-hidden-mobile">
+          <h1 className="title is-1">علم بجد</h1>
+          <div className="subtitle">
+            <a
+              href="https://fb.com/akotbfb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              للدكتور/ اشرف قطب
+            </a>
+          </div>
           <aside className="menu">
             <p className="menu-label">اذهب الى</p>
             <ul className="menu-list">
@@ -56,29 +68,35 @@ export default function index() {
           </aside>
         </div>
         <div className="column">
-          <div className="title is-2">{currentArticle.title}</div>
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{
-              __html: md.render(currentArticle.content),
-            }}
-          />
-          <nav className="pagination" role="navigation" aria-label="pagination">
+          <article>
+            <h2 className="title is-2">{currentArticle.title}</h2>
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{
+                __html: md.render(currentArticle.content),
+              }}
+            />
+          </article>
+          <nav className="columns is-mobile">
             {page > 1 && (
-              <a
-                className="pagination-previous"
-                onClick={() => setPage((page) => page - 1)}
-              >
-                السابق
-              </a>
+              <div className="column">
+                <a
+                  className="button is-info"
+                  onClick={() => setPage((page) => page - 1)}
+                >
+                  <strong>السابق</strong>
+                </a>
+              </div>
             )}
             {articles.length > page && (
-              <a
-                className="pagination-next"
-                onClick={() => setPage((page) => page + 1)}
-              >
-                التالي
-              </a>
+              <div className="column has-text-left">
+                <a
+                  className="button is-success"
+                  onClick={() => setPage((page) => page + 1)}
+                >
+                  <strong>التالي</strong>
+                </a>
+              </div>
             )}
           </nav>
         </div>

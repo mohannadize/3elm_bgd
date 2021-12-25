@@ -1,5 +1,5 @@
 // the cache version gets updated every time there is a new deployment
-const CACHE_VERSION = 2;
+const CACHE_VERSION = 4;
 const CURRENT_CACHE = `main-${CACHE_VERSION}`;
 
 // these are the routes we are going to cache for offline support
@@ -25,7 +25,7 @@ self.addEventListener("install", (evt) =>
   evt.waitUntil(
     caches.open(CURRENT_CACHE).then((cache) => {
       return cache.addAll(cacheFiles);
-    })
+    }).then(() => self.skipWaiting())
   )
 );
 

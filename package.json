@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate_articles_json && next build && next export && rm -rf docs && mv out docs && touch docs/.nojekyll",
+    "gh-pages": "npm run generate_articles_json && next build && next export && rm -rf docs && mv out docs && touch docs/.nojekyll",
+    "build": "next build",
     "start": "next start",
     "generate_articles_json": "node generate_articles.js",
     "lint": "next lint"
