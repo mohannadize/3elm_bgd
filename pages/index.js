@@ -77,7 +77,7 @@ export default function index() {
               }}
             />
           </article>
-          <nav className="columns is-mobile">
+          <nav className="columns is-mobile mt-3">
             {page > 1 && (
               <div className="column">
                 <a

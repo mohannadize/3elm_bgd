@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
-@import 'bulma-rtl.min.css';
+@import '../node_modules/bulma/css/bulma-rtl.min.css';
+@import "../node_modules/bulma-prefers-dark/css/bulma-prefers-dark.min.css";
 @import 'nprogress.css';
 
 html,
@@ -116,3 +117,10 @@ input::-webkit-inner-spin-button {
   color: #555;
   font-family: "Poppins";
 }
+/* 
+body {
+  background-color: black;
+  color: white;
+}
+@media screen and (prefers-color-scheme: dark) {
+} */
