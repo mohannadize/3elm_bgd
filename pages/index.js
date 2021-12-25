@@ -7,7 +7,11 @@ import articles from "../articles.json";
 const md = require("markdown-it")({ html: true });
 
 export default function index() {
-  const [page, setPage] = useLocalStorage("current-page", 1);
+  const [page, setPageO] = useLocalStorage("current-page", 1);
+  const setPage = (...args) => {
+    scroll(0,0);
+    return setPageO(...args);
+  }
   const [readArticles, setReadArtcles] = useLocalStorage("read-articles", {});
 
   const currentArticle = articles[page - 1];
