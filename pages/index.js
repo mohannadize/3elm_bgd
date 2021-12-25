@@ -88,7 +88,7 @@ export default function index() {
               <div className="column">
                 <a
                   className="button is-info"
-                  onClick={() => setPage((page) => page - 1)}
+                  onClick={() => setPage((page) => +page - 1)}
                 >
                   <strong>السابق</strong>
                 </a>
@@ -98,7 +98,7 @@ export default function index() {
               <div className="column has-text-left">
                 <a
                   className="button is-success"
-                  onClick={() => setPage((page) => page + 1)}
+                  onClick={() => setPage((page) => +page + 1)}
                 >
                   <strong>التالي</strong>
                 </a>
