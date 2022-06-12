@@ -3,15 +3,16 @@ import React from "react";
 import Layout from "@components/Layout";
 import useLocalStorage from "@hooks/useLocalStorage";
 import articles from "../articles.json";
+import Image from "next/image";
 
 const md = require("markdown-it")({ html: true });
 
 export default function index() {
   const [page, setPageO] = useLocalStorage("current-page", 1);
   const setPage = (...args) => {
-    scroll(0,0);
+    scroll(0, 0);
     return setPageO(...args);
-  }
+  };
   const [readArticles, setReadArtcles] = useLocalStorage("read-articles", {});
 
   const currentArticle = articles[page - 1];
@@ -76,6 +77,15 @@ export default function index() {
         <div className="column">
           <article>
             <h2 className="title is-2">{currentArticle.title}</h2>
+            <div
+              className="my-2"
+              style={{
+                width: 400,
+                maxWidth: "80vw",
+              }}
+            >
+              <img src={`/article_images/${currentArticle.id}.jpg`} />
+            </div>
             <div
               className="content"
               dangerouslySetInnerHTML={{

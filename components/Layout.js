@@ -19,7 +19,7 @@ export default function Layout({ children }) {
           href="./imgs/icons/mipmap-xxxhdpi/ic_launcher.png"
         />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Dark Mode in CSS" />
+        <meta property="og:title" content="علم بجد - د. اشرف قطب" />
         <meta
           property="og:description"
           content="مجموعة مقالات الدكتور اشرف قطب (علم بجد)"
